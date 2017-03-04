@@ -1,3 +1,0 @@
-<footer>
-  FOOTER CONTENT
-</footer>

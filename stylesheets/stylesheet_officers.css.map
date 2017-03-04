@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAEE,QAAI;EACF,QAAQ,EAAE,QAAQ;EAClB,MAAM,EAAE,KAAK;EACb,KAAK,EAAE,KAAK",
-"sources": ["../sass/stylesheet_officers.scss"],
-"names": [],
-"file": "stylesheet_officers.css"
-}
