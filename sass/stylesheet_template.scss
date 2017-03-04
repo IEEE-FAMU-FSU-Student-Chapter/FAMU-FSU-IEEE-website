@@ -1,0 +1,158 @@
+
+/** IMPORTS **/
+@import 'https://fonts.googleapis.com/css?family=Actor|Alegreya|Almendra+SC|Amatic+SC|Architects+Daughter|Arvo|Asul|Caudex|Cinzel|Cormorant+Garamond|Dosis|Julius+Sans+One|Philosopher|Ruslan+Display|VT323';
+
+/** FONTS **/
+/* Cursive */
+$Ruslan: 'Ruslan Display';
+$Architect: 'Architects Daughter';
+$Amatic_SC: 'Amatic SC';
+
+/* Sans Serif */
+$Arial: 'arial';
+$Dosis: 'Dosis';
+$Philosopher: 'Philosopher';
+$Actor: 'Actor';
+$Asul: 'Asul';
+$Julius: 'Julius Sans One';
+
+/* Serif */
+$Cormoran: 'Cormorant Garamond';
+$Arvo: 'Arvo';
+$Alegreya: 'Alegreya';
+$Cinzel: 'Cinzel';
+$Caudex: 'Caudex';
+
+/* Monospace */
+$VT323: 'VT323';
+
+/** COLORS **/
+$bg: rgba(219, 217, 217, 0.8);
+$mainTxtColor: black;
+$mainBckgndColor: rgba(3, 1, 68, 0.89);
+
+/** SIZES **/
+$headerHeight: 75px;
+$footertHeight: 500px;
+
+/** POSITIONS **/
+$navPos: 15px;
+
+/** CONTENT STYLES **/
+/* Main body Styles */
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+	background: $bg;
+	font-family: $Asul;
+  //background: rbga(196, 196, 196, 1);
+  //background: rgba(123, 142, 170, 0.6); /* For browsers that do not support gradients */
+  //background: -webkit-linear-gradient(-90deg, rgba(174, 101, 142, 0.6), rgba(222, 226, 232, 0.6)); /* For Safari 5.1 to 6.0 */
+  //background: -o-linear-gradient(-90deg, rgba(74, 101, 142, 0.6), rgba(222, 226, 232, 0.6)); /* For Opera 11.1 to 12.0 */
+  //background: -moz-linear-gradient(-90deg, rgba(74, 101, 142, 0.6), rgba(222, 226, 232, 0.6)); /* For Firefox 3.6 to 15 */
+  //background: linear-gradient(-90deg, rgba(74, 101, 142, 0.6), rgba(222, 226, 232, 0.6)); /* Standard syntax */
+}
+
+/* Header Styles*/
+header {
+  height: $headerHeight;
+  width: 100%;
+  z-index: 10;
+  position: fixed;
+  color: $mainTxtColor;
+  background: $mainBckgndColor;
+  box-shadow: 10px 0px 5px black;
+  //box-shadow: inset 0 0 10px #000000;
+  background:  white; //linear-gradient(to bottom, rgba(8, 0, 71, 0.95), rgba(8, 0, 71, 0.95), 70%, rgba(8, 0, 71, 0.95));
+   overflow: hidden;
+
+  nav {
+    font-family: $Alegreya;
+    font-size: 12px;
+    position: absolute;
+    color: black;
+    //  height: $headerHeight;
+    height: $headerHeight;
+    width: 100%;
+    //width: 40%;
+
+    ul {
+      height: $headerHeight;
+      //li~li { border-left: 1px solid black;} //linear-gradient(to bottom, white, black, white); }
+    }
+  }
+
+	nav ul li {
+		padding: $navPos;
+    display: inline-block;
+    line-height: 45px;
+    text-align: center;
+    height: $headerHeight;
+    bottom: 0px;
+    font-size: 12px;
+    width: 81px;
+    //width: 16%;
+    //border-right: 1px solid white;
+    transition:all 0.25s;
+
+    .arrow_down {
+      margin-top: 18px;
+      width: 0;
+      height: 0;
+      border-left: 6px solid transparent;
+      border-right: 6px solid transparent;
+      border-top: 8px solid grey;
+      float: right;
+
+    }
+
+    &:hover {
+      color: rgba(247, 243, 4, 0.77);
+      background-color: rgba(0, 0, 75, .75);
+      border-bottom: 2.5px solid rgba(255, 255, 0, 0.75);
+      outline: 1px solid rgba(255, 255, 0, 0.75);
+      //border-left: 2.5px solid white;
+      //border-right: 2.5px solid white;
+
+      .arrow_down {
+        border-top: 12px solid yellow;
+      }
+
+      transition:all 0.35s;
+
+
+    }
+	}
+
+  #logo{
+    right: 100px;
+    position: absolute;
+    height: 100%;
+    width: 200px;
+    img {
+      width: 300px;
+      height: 100%;
+    }
+  }
+}
+
+/* Page Content Style */
+#content {
+  top: $headerHeight;
+  width: 100%;
+  position: relative;
+}
+
+/* Footer Style */
+footer {
+  height: $footertHeight;
+  width: 100%;
+  position: relative;
+  color: $mainTxtColor;
+  background: rgba(1, 29, 73, 0.7);
+  //box-shadow: 10px 0px 5px black;
+  //box-shadow: inset 0 0 10px #000000;
+}
